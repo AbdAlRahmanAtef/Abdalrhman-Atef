@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Abdalrhman-Atef/static/css/main.d52dc892.css",
+    "main.js": "/Abdalrhman-Atef/static/js/main.e1f65112.js",
+    "static/media/weather.png": "/Abdalrhman-Atef/static/media/weather.9a9b9ae395e289286646.png",
+    "static/media/e-commerce.png": "/Abdalrhman-Atef/static/media/e-commerce.bb2f9bb947f00773571b.png",
+    "static/media/crypto.png": "/Abdalrhman-Atef/static/media/crypto.1c73f8f9b85e22ace92d.png",
+    "static/media/redux.png": "/Abdalrhman-Atef/static/media/redux.6e66cd4ff6a497e88bde.png",
+    "static/media/logo-1.png": "/Abdalrhman-Atef/static/media/logo-1.a11e63feb42d9f483f04.png",
+    "static/media/typing.png": "/Abdalrhman-Atef/static/media/typing.3c9517588e636947c2cd.png",
+    "static/media/cruds.png": "/Abdalrhman-Atef/static/media/cruds.f7ad8b11bec77951c31d.png",
+    "static/media/react.png": "/Abdalrhman-Atef/static/media/react.0cf951a69d8e58f83f9d.png",
+    "static/media/todo.png": "/Abdalrhman-Atef/static/media/todo.87e6f52c6a28b3a71d53.png",
+    "static/media/github.png": "/Abdalrhman-Atef/static/media/github.3b9e32903aa89111875d.png",
+    "static/media/home.jpg": "/Abdalrhman-Atef/static/media/home.c1456c5a64ae9453c11f.jpg",
+    "static/media/sass.png": "/Abdalrhman-Atef/static/media/sass.b1789f6448a5bae26264.png",
+    "static/media/html.png": "/Abdalrhman-Atef/static/media/html.2ba4fabc69a89a8f71e6.png",
+    "static/media/css.png": "/Abdalrhman-Atef/static/media/css.69a82c2d9e45c933a9cb.png",
+    "static/media/javascript.png": "/Abdalrhman-Atef/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
+    "index.html": "/Abdalrhman-Atef/index.html",
+    "main.d52dc892.css.map": "/Abdalrhman-Atef/static/css/main.d52dc892.css.map",
+    "main.e1f65112.js.map": "/Abdalrhman-Atef/static/js/main.e1f65112.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d52dc892.css",
+    "static/js/main.e1f65112.js"
+  ]
+}
