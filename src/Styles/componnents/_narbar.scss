@@ -1,0 +1,109 @@
+@use "../helpers/variables" as *;
+.navbar {
+  background-color: $mainColor;
+  text-transform: capitalize;
+  padding: 0 15px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 80px;
+  left: 0;
+  z-index: 100;
+  .container {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    color: $textAlt;
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 30px;
+      font-weight: bold;
+      user-select: none;
+      img {
+        width: 80px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      @media (max-width: 767px) {
+        position: fixed;
+        width: 100%;
+        flex-direction: column;
+        top: 80px;
+        background-color: $mainColor;
+        width: 100%;
+        left: 0;
+        gap: 30px;
+        border-top: 1px solid $offLight;
+        border-bottom: 1px solid $offLight;
+        transition: $transition;
+        padding: 20px;
+        display: none;
+      }
+      &.go-down {
+        display: flex;
+      }
+      li {
+        padding: 0 15px;
+        a {
+          padding: 10px 0;
+          transition: $transition;
+          color: $text;
+          border-radius: 10px;
+          cursor: pointer;
+          position: relative;
+          &::before {
+            content: "";
+            transition: $transition;
+            height: 2px;
+            background-color: $text;
+            width: 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+          &:hover::before {
+            width: 100%;
+          }
+          &.active {
+            &::before {
+              width: 100%;
+            }
+          }
+        }
+        @media (max-width: 767px) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    .toggle {
+      width: 40px;
+      height: 40px;
+      color: $textAlt;
+      font-size: 25px;
+      cursor: pointer;
+      transition: $transition;
+      display: none;
+      border: 2px solid transparent;
+      &:hover {
+        color: $text;
+      }
+      @media (max-width: 767px) {
+        display: block;
+      }
+      &.on {
+        border-radius: 6px;
+        color: $text;
+        border-color: $text;
+      }
+    }
+  }
+}

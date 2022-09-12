@@ -1,0 +1,25 @@
+@use "../helpers/variables" as *;
+.about {
+  padding: $padding;
+  background-color: $dark;
+  .container {
+    display: flex;
+    gap: 40px;
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+    .left,
+    .right {
+      flex: 1;
+    }
+    h3 {
+      color: $textAlt;
+      font-size: 30px;
+    }
+    p {
+      color: $offLight;
+      font-size: 18px;
+      list-style: 2;
+    }
+  }
+}

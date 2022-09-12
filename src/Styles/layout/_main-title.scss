@@ -1,0 +1,20 @@
+@use '../helpers/variables' as *;
+.main-title {
+  position: relative;
+  color: $text;
+  font-size: 35px;
+  font-weight: 900;
+  padding: 0 20px 20px;
+  width: fit-content;
+  margin: 0  auto 50px;
+  &::before {
+    content: "";
+    width: 80px;
+    position: absolute;
+    height: 2px;
+    background-color: $text;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,118 @@
+@use "../helpers/variables" as *;
+.projects {
+  padding: $padding;
+  background-color: $dark;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    .card {
+      background-color: $mainColor;
+      outline: hidden;
+      border-radius: 8px;
+      img {
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+        height: 200px;
+      }
+      .info {
+        padding: 20px;
+        .name {
+          color: $text;
+          padding: 15px;
+          width: fit-content;
+          position: relative;
+          margin: 0 auto 20px;
+          font-size: 30px;
+          font-weight: 700;
+          &::before {
+            content: "";
+            width: 70px;
+            height: 2px;
+            background-color: $text;
+            border-radius: 1px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+        .tec {
+          text-align: center;
+          margin-bottom: 30px;
+          p {
+            color: $textAlt;
+            padding: 15px;
+            width: fit-content;
+            margin: auto;
+            font-size: 22px;
+            color: $offLight;
+            position: relative;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+          .stack {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            span {
+              color: $textAlt;
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              color: $textAlt;
+              svg {
+                font-size: 25px;
+              }
+            }
+          }
+        }
+        .code {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          a {
+            padding: 8px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 10px;
+            background-color: $mainColorAlt;
+            color: $textAlt;
+            transition: $transition;
+            &:hover .icon {
+              animation: arrow 0.5s infinite;
+            }
+            .icon {
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .all {
+    width: fit-content;
+    padding: 8px 15px;
+    background-color: $mainColorAlt;
+    color: $textAlt;
+    font-size: 18px;
+    
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 50px auto 0;
+    border-radius: 10px;
+    & .icon {
+      animation: arrow 0.5s infinite;
+    }
+  }
+}
+@keyframes arrow {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(5px);
+  }
+}

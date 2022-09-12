@@ -1,0 +1,42 @@
+@use "../helpers/variables" as *;
+.home {
+  display: flex;
+  align-items: center;
+  background-color: $mainColor;
+  margin-top: 80px;
+  min-height: calc(100vh - 80px);
+  .container {
+    display: flex;
+    .info {
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+      flex: 1;
+      p {
+        color: $offLight;
+        font-size: 18px;
+      }
+      h1 {
+        color: $textAlt;
+        font-size: 50px;
+        margin-bottom: 10px;
+      }
+      h2 {
+        color: $offLight;
+        margin-bottom: 10px;
+      }
+    }
+    .image {
+      flex: 1;
+      @media (max-width: 767px) {
+        display: none;
+      }
+      img {
+        max-width: 100%;
+        // width: 300px;
+        border-radius: 20px 300px ;
+      }
+    }
+    
+  }
+}
