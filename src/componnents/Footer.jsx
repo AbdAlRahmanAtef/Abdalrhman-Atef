@@ -27,7 +27,7 @@ const Footer = () => {
             </span>
           </a>
           <a
-            href="mailto:abdalarhman.atef.ramadan@gmail.com"
+            href="mailto:abdalrhman.atef.ramadan@gmail.com"
             rel="noreferrer"
             target="_blank"
           >

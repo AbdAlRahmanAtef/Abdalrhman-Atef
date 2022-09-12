@@ -22,6 +22,7 @@
       font-size: 30px;
       font-weight: bold;
       user-select: none;
+      cursor: pointer;
       img {
         width: 80px;
         border-radius: 50%;
@@ -37,12 +38,12 @@
         width: 100%;
         flex-direction: column;
         top: 80px;
+        padding: 30px;
         background-color: $mainColor;
         width: 100%;
         left: 0;
         gap: 30px;
         border-top: 1px solid $offLight;
-        border-bottom: 1px solid $offLight;
         transition: $transition;
         padding: 20px;
         display: none;

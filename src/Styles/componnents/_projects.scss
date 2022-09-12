@@ -4,8 +4,8 @@
   background-color: $dark;
   .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
     .card {
       background-color: $mainColor;
       outline: hidden;
@@ -54,7 +54,7 @@
           .stack {
             display: flex;
             justify-content: space-between;
-            gap: 20px;
+            gap: 10px;
             span {
               color: $textAlt;
               display: flex;
@@ -97,13 +97,13 @@
     background-color: $mainColorAlt;
     color: $textAlt;
     font-size: 18px;
-    
+
     display: flex;
     align-items: center;
     gap: 5px;
     margin: 50px auto 0;
     border-radius: 10px;
-    & .icon {
+    &:hover .icon {
       animation: arrow 0.5s infinite;
     }
   }
