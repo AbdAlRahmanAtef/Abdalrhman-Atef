@@ -35,7 +35,7 @@ const Footer = () => {
               <HiMail />
             </span>
           </a>
-          <a href="tel:01019694477" rel="noreferrer">
+          <a href="tel:01019694471" rel="noreferrer">
             <span className="icon">
               <BsTelephoneFill />
             </span>
