@@ -13,32 +13,24 @@ const Footer = () => {
             rel="noreferrer"
             target="_blank"
           >
-            <span className="icon">
-              <FaLinkedinIn />
-            </span>
+            <FaLinkedinIn />
           </a>
           <a
             href="https://github.com/AbdAlRahmanAtef"
             rel="noreferrer"
             target="_blank"
           >
-            <span className="icon">
-              <BsGithub />
-            </span>
+            <BsGithub />
           </a>
           <a
             href="mailto:abdalrhman.atef.ramadan@gmail.com"
             rel="noreferrer"
             target="_blank"
           >
-            <span className="icon">
-              <HiMail />
-            </span>
+            <HiMail />
           </a>
           <a href="tel:01019694471" rel="noreferrer">
-            <span className="icon">
-              <BsTelephoneFill />
-            </span>
+            <BsTelephoneFill />
           </a>
         </div>
       </div>
