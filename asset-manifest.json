@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Abdalrhman-Atef/static/css/main.b4f60ae0.css",
-    "main.js": "/Abdalrhman-Atef/static/js/main.4ee2553e.js",
+    "main.css": "/Abdalrhman-Atef/static/css/main.eb477cb8.css",
+    "main.js": "/Abdalrhman-Atef/static/js/main.776d7616.js",
     "static/media/weather.png": "/Abdalrhman-Atef/static/media/weather.9a9b9ae395e289286646.png",
     "static/media/e-commerce.png": "/Abdalrhman-Atef/static/media/e-commerce.bb2f9bb947f00773571b.png",
     "static/media/crypto.png": "/Abdalrhman-Atef/static/media/crypto.1c73f8f9b85e22ace92d.png",
@@ -18,11 +18,11 @@
     "static/media/css.png": "/Abdalrhman-Atef/static/media/css.69a82c2d9e45c933a9cb.png",
     "static/media/javascript.png": "/Abdalrhman-Atef/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/Abdalrhman-Atef/index.html",
-    "main.b4f60ae0.css.map": "/Abdalrhman-Atef/static/css/main.b4f60ae0.css.map",
-    "main.4ee2553e.js.map": "/Abdalrhman-Atef/static/js/main.4ee2553e.js.map"
+    "main.eb477cb8.css.map": "/Abdalrhman-Atef/static/css/main.eb477cb8.css.map",
+    "main.776d7616.js.map": "/Abdalrhman-Atef/static/js/main.776d7616.js.map"
   },
   "entrypoints": [
-    "static/css/main.b4f60ae0.css",
-    "static/js/main.4ee2553e.js"
+    "static/css/main.eb477cb8.css",
+    "static/js/main.776d7616.js"
   ]
 }
