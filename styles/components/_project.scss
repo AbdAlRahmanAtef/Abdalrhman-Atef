@@ -71,7 +71,7 @@
           justify-content: space-between;
           align-items: center;
           a {
-            padding: 8px 15px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -89,15 +89,17 @@
     }
   }
   .all {
-    width: fit-content;
-    padding: 8px 15px;
+    width: 150px;
     background-color: $mainColorAlt;
+    height: 40px;
     color: $textAlt;
     font-size: 18px;
+    font-weight: bold;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
-    margin: 50px 0;
+    margin: 30px 0;
     border-radius: 10px;
     &:hover .icon {
       animation: arrow 0.5s infinite;
