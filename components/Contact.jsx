@@ -2,7 +2,7 @@ import React from "react";
 import { FaLinkedinIn } from "react-icons/fa";
 import { BsGithub, BsTelephoneFill } from "react-icons/bs";
 import { HiMail } from "react-icons/hi";
-const Footer = () => {
+const Contact = () => {
   return (
     <div className="footer" id="contact">
       <h2 className="main-title">Contact</h2>
@@ -38,4 +38,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Contact;

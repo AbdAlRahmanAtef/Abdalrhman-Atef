@@ -11,9 +11,7 @@
       outline: hidden;
       border-radius: 8px;
       img {
-        width: 100%;
         border-radius: 8px 8px 0 0;
-        height: 200px;
       }
       .info {
         padding: 20px;
@@ -56,11 +54,12 @@
             justify-content: space-between;
             gap: 10px;
             span {
-              color: $textAlt;
               display: flex;
               align-items: center;
-              gap: 8px;
+              gap: 0px;
               color: $textAlt;
+              font-size: 14px;
+              font-weight: bold;
               svg {
                 font-size: 25px;
               }
@@ -75,16 +74,14 @@
             padding: 8px 15px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             border-radius: 10px;
             background-color: $mainColorAlt;
             color: $textAlt;
             transition: $transition;
-            &:hover .icon {
-              animation: arrow 0.5s infinite;
-            }
-            .icon {
-              margin-left: 5px;
+            width: 80px;
+            &:hover {
+              transform: scale(1.08);
             }
           }
         }
@@ -97,11 +94,10 @@
     background-color: $mainColorAlt;
     color: $textAlt;
     font-size: 18px;
-
     display: flex;
     align-items: center;
     gap: 5px;
-    margin: 50px auto 0;
+    margin: 50px 0;
     border-radius: 10px;
     &:hover .icon {
       animation: arrow 0.5s infinite;

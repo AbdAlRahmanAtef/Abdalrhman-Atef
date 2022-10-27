@@ -1,12 +1,12 @@
-@use "./helpers/variables" as *;
-@use "./layout/main-title";
+@use "./components/navbar";
+@use "./components/home";
+@use "./components/about";
+@use "./components/skill";
+@use "./components/project";
+@use "./components/contact";
 @use "./helpers/grid";
-@use "./componnents/narbar";
-@use "./componnents/home";
-@use "./componnents/about";
-@use "./componnents/skills";
-@use "./componnents/projects";
-@use "./componnents/footer";
+@use "./helpers/main-titel";
+@use "./helpers/variables" as *;
 
 * {
   margin: 0;

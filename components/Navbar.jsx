@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { BsList } from "react-icons/bs";
-import logo from "../images/logo-1.png";
+import logo from "../assets/logo-1.png";
+import Image from "next/image";
+
 const Navbar = () => {
   const [menu, setmenu] = useState(false);
   const handleMenuClass = () => {
@@ -11,9 +13,12 @@ const Navbar = () => {
       return "links";
     }
   };
-  window.onscroll = () => {
-    setmenu(false);
-  };
+
+  useEffect(() => {
+    window.onscroll = () => {
+      setmenu(false);
+    };
+  });
   return (
     <div className="navbar">
       <div className="container">
@@ -26,7 +31,7 @@ const Navbar = () => {
           duration={50}
         >
           <div className="logo">
-            <img src={logo} alt="logo" /> <span>Abdalrhman</span>
+            <Image src={logo} alt="logo" width={80} height={60} /> <span>Abdalrhman</span>
           </div>
         </Link>
         <ul className={handleMenuClass()}>

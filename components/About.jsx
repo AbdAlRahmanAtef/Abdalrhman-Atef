@@ -1,12 +1,14 @@
-import React from 'react'
+import React from "react";
 
 const About = () => {
   return (
-    <div className="about" id='about'>
+    <div className="about" id="about">
       <h2 className="main-title">About</h2>
       <div className="container">
         <div className="left">
-          <h3>Hi. I'm Abdalrhman, nice to meet you. Please take a look around.</h3>
+          <h3>
+            Hi. I'm Abdalrhman, nice to meet you. Please take a look around.
+          </h3>
         </div>
         <div className="right">
           <p>
@@ -20,6 +22,6 @@ const About = () => {
       </div>
     </div>
   );
-}
+};
 
-export default About
+export default About;
