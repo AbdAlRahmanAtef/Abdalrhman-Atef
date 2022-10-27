@@ -2,7 +2,7 @@
 .projects {
   padding: $padding;
   background-color: $dark;
-  .container {
+  .content {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 40px;
@@ -71,12 +71,12 @@
           justify-content: space-between;
           align-items: center;
           a {
-            height: 40px;
+            height: 54px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 10px;
-            background-color: $mainColorAlt;
+            border: 1px solid $offLight;
             color: $textAlt;
             transition: $transition;
             width: 80px;
@@ -90,8 +90,9 @@
   }
   .all {
     width: 150px;
-    background-color: $mainColorAlt;
-    height: 40px;
+    // background-color: $mainColorAlt;
+    border: 1px solid $offLight;
+    height: 54px;
     color: $textAlt;
     font-size: 18px;
     font-weight: bold;
@@ -99,7 +100,7 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
-    margin: 30px 0;
+    margin: 50px 0;
     border-radius: 10px;
     &:hover .icon {
       animation: arrow 0.5s infinite;

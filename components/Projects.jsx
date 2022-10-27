@@ -196,47 +196,49 @@ const Projects = () => {
     <div className="projects" id="proj">
       <h2 className="main-title">Projects</h2>
       <div className="container">
-        {projects.map((project) => (
-          <div key={project.name} className="card">
-            <Image className="image" src={project.image} alt={project.name} />
-            <div className="info">
-              <p className="name">{project.name}</p>
-              <div className="tec">
-                <p>
-                  <ImStackoverflow /> Stack
-                </p>
-                <div className="stack">
-                  {project.stack.map((tec) => (
-                    <>
-                      <span>
-                        {tec.icon}
-                        {tec.tec}
-                      </span>
-                    </>
-                  ))}
+        <div className="content">
+          {projects.map((project) => (
+            <div key={project.name} className="card">
+              <Image className="image" src={project.image} alt={project.name} />
+              <div className="info">
+                <p className="name">{project.name}</p>
+                <div className="tec">
+                  <p>
+                    <ImStackoverflow /> Stack
+                  </p>
+                  <div className="stack">
+                    {project.stack.map((tec) => (
+                      <>
+                        <span>
+                          {tec.icon}
+                          {tec.tec}
+                        </span>
+                      </>
+                    ))}
+                  </div>
+                </div>
+                <div className="code">
+                  <a
+                    href={project.code}
+                    title="Code On Github"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaCode size={20} />
+                  </a>
+                  <a
+                    href={project.live}
+                    title="Code On Github"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <BsEye size={20} />
+                  </a>
                 </div>
               </div>
-              <div className="code">
-                <a
-                  href={project.code}
-                  title="Code On Github"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaCode size={20} />
-                </a>
-                <a
-                  href={project.live}
-                  title="Code On Github"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <BsEye size={20} />
-                </a>
-              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
         <a
           href="https://github.com/AbdAlRahmanAtef?tab=repositories"
           className="all"
