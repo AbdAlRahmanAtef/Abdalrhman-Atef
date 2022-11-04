@@ -91,8 +91,8 @@ const projects = [
   },
   {
     name: "Todo App",
-    code: "https://github.com/AbdAlRahmanAtef/react-todo-list",
-    live: "https://abdalrahmanatef.github.io/react-todo-list/",
+    code: "https://github.com/AbdAlRahmanAtef/next-todo-app",
+    live: "https://next-todo-omcy2lliu-abdalrahmanatef.vercel.app/",
     image: todo,
     stack: [
       {
@@ -100,12 +100,8 @@ const projects = [
         icon: <DiReact />,
       },
       {
-        tec: "Redux",
-        icon: <SiRedux />,
-      },
-      {
         tec: "SASS",
-        icon: <SiRedux />,
+        icon: <TbBrandSass />,
       },
     ],
   },
@@ -228,7 +224,7 @@ const Projects = () => {
                   </a>
                   <a
                     href={project.live}
-                    title="Code On Github"
+                    title="Preview"
                     target="_blank"
                     rel="noreferrer"
                   >

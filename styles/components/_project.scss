@@ -56,7 +56,7 @@
             span {
               display: flex;
               align-items: center;
-              gap: 0px;
+              gap: 5px;
               color: $textAlt;
               font-size: 14px;
               font-weight: bold;
@@ -90,7 +90,6 @@
   }
   .all {
     width: 150px;
-    // background-color: $mainColorAlt;
     border: 1px solid $offLight;
     height: 54px;
     color: $textAlt;
