@@ -10,9 +10,15 @@ import {
 import { DiReact } from "react-icons/di";
 import { FaCode } from "react-icons/fa";
 import { ImStackoverflow } from "react-icons/im";
-import { SiRedux } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiRedux,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 import { AiOutlineApi } from "react-icons/ai";
 import { FiDatabase } from "react-icons/fi";
+import { GiElectric } from "react-icons/gi";
 import Image from "next/image";
 import React from "react";
 import rec from "../assets/r-commerce.jpg";
@@ -23,8 +29,75 @@ import todo from "../assets/todo.jpg";
 import game from "../assets/typing.jpg";
 import cruds from "../assets/cruds.jpg";
 import weather from "../assets/weather.jpg";
+import tiktik from "../assets/tiktik.jpg";
+import realator from "../assets/realator.jpg";
 
 const projects = [
+  {
+    name: "TikTik",
+    code: "https://github.com/AbdAlRahmanAtef/tik-tik",
+    live: "https://tik-m7c3y402t-abdalrahmanatef.vercel.app/",
+    image: tiktik,
+    stack: [
+      {
+        tec: "Next",
+        icon: <SiNextdotjs />,
+      },
+      {
+        tec: "TypeScript",
+        icon: <SiTypescript />,
+      },
+      {
+        tec: "Tailwind",
+        icon: <SiTailwindcss />,
+      },
+      {
+        tec: "Sanity",
+        icon: <FiDatabase />,
+      },
+    ],
+  },
+
+  {
+    name: "E-Commerce",
+    code: "https://github.com/AbdAlRahmanAtef/nextjs-ecommerce",
+    live: "https://nextjs-ecommerce-rcbbkxx15-abdalrahmanatef.vercel.app/",
+    image: sec,
+    stack: [
+      {
+        tec: "Next",
+        icon: <TbBrandNextjs />,
+      },
+      {
+        tec: "SASS",
+        icon: <TbBrandSass />,
+      },
+      {
+        tec: "Sanity",
+        icon: <FiDatabase />,
+      },
+    ],
+  },
+  {
+    name: "Realator",
+    code: "https://github.com/AbdAlRahmanAtef/realator",
+    live: "https://realator-k71c7byw2-abdalrahmanatef.vercel.app/",
+    image: realator,
+    stack: [
+      {
+        tec: "Next",
+        icon: <SiNextdotjs />,
+      },
+      {
+        tec: "Chakra UI",
+        icon: <GiElectric />,
+      },
+      {
+        tec: "API",
+        icon: <AiOutlineApi />,
+      },
+    ],
+  },
   {
     name: "Cryptocurrency",
     code: "https://github.com/AbdAlRahmanAtef/Cryptocurrency-App",
@@ -49,46 +122,26 @@ const projects = [
       },
     ],
   },
-  {
-    name: "Next E-Commerce",
-    code: "https://github.com/AbdAlRahmanAtef/nextjs-ecommerce",
-    live: "https://nextjs-ecommerce-4zcku11tc-abdalrahmanatef.vercel.app/",
-    image: sec,
-    stack: [
-      {
-        tec: "Next",
-        icon: <TbBrandNextjs />,
-      },
-      {
-        tec: "SASS",
-        icon: <TbBrandSass />,
-      },
-      {
-        tec: "Sanity",
-        icon: <FiDatabase />,
-      },
-    ],
-  },
-  {
-    name: "React E-Commerce",
-    code: "https://github.com/AbdAlRahmanAtef/React-E-Commerce",
-    live: "https://abdalrahmanatef.github.io/React-E-Commerce/",
-    image: rec,
-    stack: [
-      {
-        tec: "React",
-        icon: <DiReact />,
-      },
-      {
-        tec: "SASS",
-        icon: <TbBrandSass />,
-      },
-      {
-        tec: "API",
-        icon: <AiOutlineApi />,
-      },
-    ],
-  },
+  // {
+  //   name: "React E-Commerce",
+  //   code: "https://github.com/AbdAlRahmanAtef/React-E-Commerce",
+  //   live: "https://abdalrahmanatef.github.io/React-E-Commerce/",
+  //   image: rec,
+  //   stack: [
+  //     {
+  //       tec: "React",
+  //       icon: <DiReact />,
+  //     },
+  //     {
+  //       tec: "SASS",
+  //       icon: <TbBrandSass />,
+  //     },
+  //     {
+  //       tec: "API",
+  //       icon: <AiOutlineApi />,
+  //     },
+  //   ],
+  // },
   {
     name: "Todo App",
     code: "https://github.com/AbdAlRahmanAtef/next-todo-app",
@@ -96,12 +149,32 @@ const projects = [
     image: todo,
     stack: [
       {
-        tec: "React",
-        icon: <DiReact />,
+        tec: "Next",
+        icon: <SiNextdotjs />,
       },
       {
         tec: "SASS",
         icon: <TbBrandSass />,
+      },
+    ],
+  },
+  {
+    name: "Inventory App",
+    code: "https://github.com/AbdAlRahmanAtef/Products-Management-System-CRUDS",
+    live: "https://abdalrahmanatef.github.io/Products-Management-System-CRUDS/",
+    image: cruds,
+    stack: [
+      {
+        tec: "HTML",
+        icon: <TbBrandHtml5 />,
+      },
+      {
+        tec: "SASS",
+        icon: <TbBrandSass />,
+      },
+      {
+        tec: "JavaScript",
+        icon: <TbBrandJavascript />,
       },
     ],
   },
@@ -145,26 +218,7 @@ const projects = [
       },
     ],
   },
-  {
-    name: "Inventory App",
-    code: "https://github.com/AbdAlRahmanAtef/Products-Management-System-CRUDS",
-    live: "https://abdalrahmanatef.github.io/Products-Management-System-CRUDS/",
-    image: cruds,
-    stack: [
-      {
-        tec: "HTML",
-        icon: <TbBrandHtml5 />,
-      },
-      {
-        tec: "SASS",
-        icon: <TbBrandSass />,
-      },
-      {
-        tec: "JavaScript",
-        icon: <TbBrandJavascript />,
-      },
-    ],
-  },
+
   {
     name: "Typing Speed Test",
     code: "https://github.com/AbdAlRahmanAtef/Typing-Speed-Test-Game",
@@ -193,8 +247,8 @@ const Projects = () => {
       <h2 className="main-title">Projects</h2>
       <div className="container">
         <div className="content">
-          {projects.map((project) => (
-            <div key={project.name} className="card">
+          {projects.map((project, index) => (
+            <div key={index} className="card">
               <Image className="image" src={project.image} alt={project.name} />
               <div className="info">
                 <p className="name">{project.name}</p>
