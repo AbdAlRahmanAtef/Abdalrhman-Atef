@@ -21,7 +21,6 @@ import { FiDatabase } from "react-icons/fi";
 import { GiElectric } from "react-icons/gi";
 import Image from "next/image";
 import React from "react";
-import rec from "../assets/r-commerce.jpg";
 import sec from "../assets/s-commerce.jpg";
 import coffee from "../assets/coffee.jpg";
 import crypto from "../assets/crypto.jpg";
@@ -31,6 +30,7 @@ import cruds from "../assets/cruds.jpg";
 import weather from "../assets/weather.jpg";
 import tiktik from "../assets/tiktik.jpg";
 import realator from "../assets/realator.jpg";
+import quran from "../assets/quran.jpg";
 
 const projects = [
   {
@@ -116,10 +116,6 @@ const projects = [
         tec: "SASS",
         icon: <TbBrandSass />,
       },
-      {
-        tec: "API",
-        icon: <AiOutlineApi />,
-      },
     ],
   },
   // {
@@ -142,6 +138,26 @@ const projects = [
   //     },
   //   ],
   // },
+  {
+    name: "Al-Quran Al-Kareem",
+    code: "https://github.com/AbdAlRahmanAtef/quran-app",
+    live: "https://al-quran-al-karem-movsu73ml-abdalrahmanatef.vercel.app/",
+    image: quran,
+    stack: [
+      {
+        tec: "Next",
+        icon: <SiNextdotjs />,
+      },
+      {
+        tec: "SASS",
+        icon: <TbBrandSass />,
+      },
+      {
+        tec: "API",
+        icon: <AiOutlineApi />,
+      },
+    ],
+  },
   {
     name: "Todo App",
     code: "https://github.com/AbdAlRahmanAtef/next-todo-app",
