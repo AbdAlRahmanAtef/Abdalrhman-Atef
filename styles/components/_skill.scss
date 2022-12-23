@@ -2,13 +2,13 @@
 
 .skills {
   padding: $padding;
-  background-color: $dark;
+  // background-color: $dark;
   .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 40px;
     .card {
-      background-color: $mainColor;
+      background-color: $dark;
       padding: 25px 15px;
       border-radius: 8px;
       display: flex;

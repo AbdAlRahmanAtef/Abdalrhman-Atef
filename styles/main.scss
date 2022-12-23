@@ -25,13 +25,18 @@ a {
 body {
   font-family: "Open Sans", sans-serif;
 }
+.portfolio {
+  background-image: url("../assets/bg.png");
+  background-attachment: fixed;
+  background-size: cover;
+}
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background-color: $dark;
+  background-color: $mainColorAlt;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: $mainColorAlt;
+  background-color: $dark;
   border-radius: 5px;
 }

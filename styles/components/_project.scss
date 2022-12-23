@@ -1,13 +1,13 @@
 @use "../helpers/variables" as *;
 .projects {
   padding: $padding;
-  background-color: $dark;
+  // background-color: $dark;
   .content {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 40px;
     .card {
-      background-color: $mainColor;
+      background-color: $dark;
       outline: hidden;
       border-radius: 8px;
       img {
@@ -38,6 +38,21 @@
         .tec {
           text-align: center;
           margin-bottom: 30px;
+          .stack-btn {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid transparent;
+            transition: 0.3s;
+            border-radius: 8px;
+            &:hover {
+              border-color: $text;
+            }
+            &:focus {
+              border-color: $text;
+            }
+          }
           p {
             color: $textAlt;
             padding: 15px;
@@ -51,13 +66,28 @@
           }
           .stack {
             display: flex;
+            gap: 20px;
             justify-content: space-between;
-            gap: 10px;
+            flex-wrap: wrap;
+            padding: 0px;
+            visibility: hidden;
+            border-radius: 8px;
+            border: 1px solid #777;
+            transition: 0.3s;
+            height: 0;
+            overflow: hidden;
+            &.active {
+              transition: 0.3s;
+              height: fit-content;
+              visibility: visible;
+              padding: 20px;
+              transition: 0.3s;
+            }
             span {
               display: flex;
               align-items: center;
               gap: 5px;
-              color: $textAlt;
+              color: #777;
               font-size: 14px;
               font-weight: bold;
               svg {
