@@ -31,7 +31,8 @@ const Navbar = () => {
           duration={50}
         >
           <div className="logo">
-            <Image src={logo} alt="logo" width={80} height={60} /> <span>Abdalrhman</span>
+            <Image src={logo} alt="logo" width={80} height={60} />{" "}
+            <span>Abdalrhman</span>
           </div>
         </Link>
         <ul className={handleMenuClass()}>
@@ -69,7 +70,7 @@ const Navbar = () => {
               duration={50}
             >
               Skills
-            </Link>
+            </Link>{" "}
           </li>
           <li>
             <Link
