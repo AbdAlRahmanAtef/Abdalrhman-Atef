@@ -73,7 +73,7 @@ const ProjectItem = ({ project }) => {
               />
             }
             sx={{
-              background: 'linear-gradient(220deg, #0f1624, #202c41)',
+              background: 'linear-gradient(to right, #0f1624, #202c41)',
               color: '#fff',
               px: '20px',
               py: '10px',
@@ -130,7 +130,7 @@ const ProjectItem = ({ project }) => {
             rel="noreferrer"
             startIcon={<AiFillGithub />}
             sx={{
-              background: 'linear-gradient(220deg, #0f1624, #202c41)',
+              background: 'linear-gradient(to right, #0f1624, #202c41)',
               color: '#fff',
               px: '14px',
               py: '6px',
@@ -152,7 +152,7 @@ const ProjectItem = ({ project }) => {
             rel="noreferrer"
             startIcon={<MdRemoveRedEye />}
             sx={{
-              background: 'linear-gradient(220deg, #0f1624, #202c41)',
+              background: 'linear-gradient(to right, #0f1624, #202c41)',
               color: '#fff',
               px: '14px',
               py: '6px',

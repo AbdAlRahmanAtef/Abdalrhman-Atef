@@ -27,9 +27,10 @@ const Projects = () => {
           component={Link}
           href="https://github.com/AbdAlRahmanAtef?tab=repositories"
           target="_blank"
-          startIcon={<AiFillGithub />}
+          startIcon={<AiFillGithub size={25} />}
           sx={{
-            background: 'linear-gradient(62deg, #5656e1, #92c5ef)',
+            background: 'linear-gradient(to right, #0f1624, #202c41)',
+            boxShadow: 'none',
             color: '#fff',
             px: '20px',
             py: '10px',
