@@ -1,42 +1,73 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-scroll";
-import { BsList } from "react-icons/bs";
-import logo from "../assets/logo-1.png";
-import Image from "next/image";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-scroll';
+import logo from '../assets/logo.png';
+import Image from 'next/image';
+import { Box, Container, Paper, Stack, Typography } from '@mui/material';
+import { FaLinkedinIn } from 'react-icons/fa';
+import { BsGithub, BsTelephoneFill } from 'react-icons/bs';
+import { HiMail } from 'react-icons/hi';
 
 const Navbar = () => {
-  const [menu, setmenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const handleMenuClass = () => {
-    if (menu) {
-      return "links go-down";
+    if (showMenu) {
+      return 'links go-down';
     } else {
-      return "links";
+      return 'links';
     }
   };
 
   useEffect(() => {
-    window.onscroll = () => {
-      setmenu(false);
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll <= 0) {
+        setHidden(false);
+        lastScroll = currentScroll;
+      }
+
+      if (currentScroll > lastScroll) {
+        setHidden(true);
+        lastScroll = currentScroll;
+      } else if (currentScroll < lastScroll) {
+        setHidden(false);
+        lastScroll = currentScroll;
+      }
+    });
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', () => {});
     };
-  });
+  }, []);
+
+  // setShowMenu(false);
   return (
-    <div className="navbar">
-      <div className="container">
-        <Link
-          activeClass="active"
-          to="home"
-          spy={true}
-          smooth={true}
-          offset={-100}
-          duration={50}
+    <Paper
+      sx={{
+        p: '16px 16px',
+        backgroundColor: '#0f1624',
+        position: 'fixed',
+        width: '100%',
+        left: 0,
+        right: 0,
+        transition: '.3s',
+        zIndex: 1000,
+        top: hidden ? '-100px' : '0px',
+      }}
+    >
+      <Container>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
         >
-          <div className="logo">
-            <Image src={logo} alt="logo" width={80} height={60} />{" "}
-            <span>Abdalrhman</span>
-          </div>
-        </Link>
-        <ul className={handleMenuClass()}>
-          <li className="nav-item">
+          <Typography sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            {' '}
             <Link
               activeClass="active"
               to="home"
@@ -45,64 +76,217 @@ const Navbar = () => {
               offset={-100}
               duration={50}
             >
-              Home
+              <Typography sx={{ display: 'flex', alignItems: 'center' }}>
+                <Image
+                  src={logo}
+                  width={80}
+                  height={60}
+                  alt="logo"
+                  className="logo-image"
+                />{' '}
+                <Typography
+                  sx={{
+                    fontSize: '30px',
+                    fontWeight: 700,
+                    color: '#b6c0c0',
+                    width: 'fit-content',
+                    background:
+                      'linear-gradient(121.57deg,#FFFFFF 18.77%,rgba(255,255,255,0.66) 60.15%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    display: { xs: 'none', md: 'block' },
+                  }}
+                >
+                  Abdalrahman
+                </Typography>
+              </Typography>
             </Link>
-          </li>
-          <li>
-            <Link
-              activeClass="active"
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={50}
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              activeClass="active"
-              to="skills"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={50}
-            >
-              Skills
-            </Link>{" "}
-          </li>
-          <li>
-            <Link
-              activeClass="active"
-              to="proj"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={50}
-            >
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link
-              activeClass="active"
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-300}
-              duration={50}
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
-        <BsList
-          className={menu ? "toggle on" : "toggle"}
-          onClick={() => setmenu(!menu)}
-        />
-      </div>
-    </div>
+          </Typography>
+          <Box
+            sx={{
+              display: { xs: 'none', md: 'flex' },
+              alignItems: 'center',
+              gap: 2,
+            }}
+          >
+            <Typography className="nav-item">
+              <Link
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={50}
+              >
+                Home
+              </Link>
+            </Typography>
+            <Typography className="nav-item">
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={50}
+              >
+                About
+              </Link>
+            </Typography>
+            <Typography className="nav-item">
+              <Link
+                activeClass="active"
+                to="skills"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={50}
+              >
+                Skills
+              </Link>{' '}
+            </Typography>
+            <Typography className="nav-item">
+              <Link
+                activeClass="active"
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={50}
+              >
+                Projects
+              </Link>
+            </Typography>
+            <Typography className="nav-item">
+              <Link
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-300}
+                duration={50}
+              >
+                Contact
+              </Link>
+            </Typography>
+          </Box>
+          <Box
+            sx={{ display: { md: 'none' } }}
+            className={`burger-icon  ${showMenu && 'close'}`}
+            onClick={() => setShowMenu((prev) => !prev)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </Box>
+        </Box>
+      </Container>
+      <Paper
+        sx={{
+          position: 'fixed',
+          display: 'flex',
+          flexDirection: 'column',
+          backgroundColor: '#0f1624',
+          zIndex: 10,
+          height: 'calc(100vh - 77px)',
+          top: '77px',
+          right: showMenu ? 0 : '-120%',
+          width: '250px',
+          alignItems: 'start',
+          padding: '16px',
+          gap: 2,
+          transition: '.5s',
+        }}
+      >
+        {' '}
+        <Typography className="nav-item" textAlign="start">
+          <Link
+            activeClass="active"
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={50}
+          >
+            Home
+          </Link>
+        </Typography>
+        <Typography className="nav-item" textAlign="start">
+          <Link
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={50}
+          >
+            About
+          </Link>
+        </Typography>
+        <Typography className="nav-item" textAlign="start">
+          <Link
+            activeClass="active"
+            to="skills"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={50}
+          >
+            Skills
+          </Link>{' '}
+        </Typography>
+        <Typography className="nav-item" textAlign="start">
+          <Link
+            activeClass="active"
+            to="proj"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={50}
+          >
+            Projects
+          </Link>
+        </Typography>
+        <Typography mb={4} className="nav-item" textAlign="start">
+          <Link
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-300}
+            duration={50}
+          >
+            Contact
+          </Link>
+        </Typography>
+        <div className="icons">
+          <a
+            href="https://www.linkedin.com/in/abdalrhman-atef-12b73022b/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <FaLinkedinIn />
+          </a>
+          <a
+            href="https://github.com/AbdAlRahmanAtef"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <BsGithub />
+          </a>
+          <a
+            href="mailto:abdalrhman.atef.ramadan@gmail.com"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <HiMail />
+          </a>
+          <a href="tel:01019694471" rel="noreferrer">
+            <BsTelephoneFill />
+          </a>
+        </div>
+      </Paper>
+    </Paper>
   );
 };
 

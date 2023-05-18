@@ -1,44 +1,162 @@
-@use "./components/navbar";
-@use "./components/home";
-@use "./components/about";
-@use "./components/skill";
-@use "./components/project";
-@use "./components/contact";
-@use "./helpers/grid";
-@use "./helpers/main-titel";
-@use "./helpers/variables" as *;
+@use './components/navbar';
+@use './components/home';
+@use './components/about';
+@use './components/skill';
+@use './components/project';
+@use './components/contact';
+@use './helpers/grid';
+@use './helpers/main-titel';
+@use './helpers/variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 ul {
   list-style: none;
 }
+
 a {
   text-decoration: none;
 }
+
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Space Grotesk', sans-serif !important;
+  background-color: #0f1624;
+  color: #737b85;
 }
-.portfolio {
-  background-color: $mainColorAlt;
-  // background-image: url("../assets/bg.png");
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1039%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(15%2c 8%2c 57%2c 1)'%3e%3c/rect%3e%3cpath d='M558.928087128354 410.45896799662296L469.27002853049373 500.11702659448326 558.928087128354 589.7750851923436 648.5861457262143 500.11702659448326z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1402.963%2c226.354C1426.741%2c226.007%2c1449.688%2c215.214%2c1461.43%2c194.534C1473.039%2c174.089%2c1469.213%2c149.651%2c1458.358%2c128.796C1446.418%2c105.858%2c1428.755%2c84.069%2c1402.963%2c82.211C1374.297%2c80.146%2c1345.418%2c94.382%2c1331.779%2c119.68C1318.688%2c143.962%2c1326.15%2c173.34%2c1341.462%2c196.286C1355.038%2c216.63%2c1378.508%2c226.711%2c1402.963%2c226.354' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M697.7386818872538 319.18487382428975L808.8803619889626 235.43361064841798 725.1290988130909 124.29193054670921 613.9874187113821 208.04319372258098z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1078.0652160166903 201.83184336093518L1142.3960507601778 278.4983467810707 1219.0625541803133 214.16751203758326 1154.7317194368259 137.50100861744772z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M987.449%2c588.446C1037.786%2c586.473%2c1075.738%2c547.808%2c1100.193%2c503.766C1123.799%2c461.253%2c1132.148%2c411.217%2c1109.857%2c368C1085.652%2c321.074%2c1040.25%2c285.249%2c987.449%2c285.185C934.555%2c285.121%2c890.593%2c321.678%2c864.525%2c367.703C838.875%2c412.991%2c832.955%2c467.778%2c858.277%2c513.25C884.256%2c559.903%2c934.091%2c590.538%2c987.449%2c588.446' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1432.6337508545878 146.6002609292244L1413.3707004084495 55.97473379991975 1322.7451732791449 75.23778424605806 1342.0082237252832 165.86331137536268z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1039'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
-  background-attachment: fixed;
-  background-size: cover;
-}
+
 ::-webkit-scrollbar {
   width: 0px;
 }
-// ::-webkit-scrollbar-track {
-//   background-color: $mainColorAlt;
-// }
-// ::-webkit-scrollbar-thumb {
-//   background-color: $dark;
-//   border-radius: 5px;
-// }
+
+.burger-icon {
+  width: 40px;
+  height: 30px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.burger-icon span {
+  background-color: #b6c0bf;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  display: block;
+  transition: 0.5s;
+}
+
+.burger-icon.close span:nth-child(1) {
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.burger-icon.close span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-icon.close span:nth-child(3) {
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 0;
+  transform: rotate(-45deg);
+}
+
+.logo-image {
+  width: 80px;
+}
+
+.nav-item {
+  padding: 0 15px;
+  a {
+    padding: 10px 0;
+    transition: $transition;
+    color: #b6c0c0;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    &::before {
+      content: '';
+      transition: $transition;
+      height: 2px;
+      background-color: #b6c0c0;
+      width: 0;
+      position: absolute;
+      border-radius: 1px;
+      bottom: 0;
+      left: 0;
+    }
+    &:hover::before {
+      width: 100%;
+    }
+    &.active {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.icons {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  a {
+    color: $textAlt;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    transition: $transition;
+    justify-content: center;
+    &:hover {
+      transform: scale(1.2);
+    }
+    &:first-child {
+      background-color: #00a0dc;
+    }
+    &:nth-child(2) {
+      background-color: #222;
+    }
+    &:nth-child(3) {
+      background-color: #b7b7b7;
+    }
+    &:nth-child(4) {
+      background-color: #333;
+    }
+  }
+}
+
+::-webkit-scrollbar-track {
+  background-color: $mainColorAlt;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $dark;
+  border-radius: 5px;
+}

@@ -1,92 +1,51 @@
-import { BiRightArrowAlt } from "react-icons/bi";
-import { BsEye } from "react-icons/bs";
-import { FaCode } from "react-icons/fa";
-import { ImStackoverflow } from "react-icons/im";
-
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
-import Image from "next/image";
-import React, { useState } from "react";
-import { projectsData } from "../utils/constants";
+import React, { useState } from 'react';
+import { projectsData } from '../utils/constants';
+import { Box, Button, Link } from '@mui/material';
+import Title from './Title';
+import ProjectItem from './ProjectItem';
+import { AiFillGithub } from 'react-icons/ai';
 
 const Projects = () => {
-  const [activeStack, setActiveStack] = useState(0);
-
-  const handleActiveStack = (idx) => {
-    if (activeStack === idx) {
-      setActiveStack(0);
-    } else {
-      setActiveStack(idx);
-    }
-  };
-
   return (
-    <div className="projects" id="proj">
-      <h2 className="main-title">Projects</h2>
-      <div className="container">
-        <div className="content">
-          {projectsData.map((project, index) => (
-            <div key={index} className="card">
-              <Image className="image" src={project.image} alt={project.name} />
-              <div className="info">
-                <p className="name">{project.name}</p>
-                <div className="tec">
-                  <p
-                    className="stack-btn"
-                    onClick={() => handleActiveStack(index + 1)}
-                  >
-                    <ImStackoverflow /> Stack{" "}
-                    {activeStack === index + 1 ? (
-                      <MdKeyboardArrowUp size={25} />
-                    ) : (
-                      <MdKeyboardArrowDown size={25} />
-                    )}{" "}
-                  </p>
-                  <div
-                    className={`stack ${activeStack === index + 1 && "active"}`}
-                  >
-                    {project.stack.map((tec) => (
-                      <>
-                        <span>
-                          {tec.icon}
-                          {tec.tec}
-                        </span>
-                      </>
-                    ))}
-                  </div>
-                </div>
-                <div className="code">
-                  <a
-                    href={project.code}
-                    title="Code On Github"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaCode size={20} />
-                  </a>
-                  <a
-                    href={project.live}
-                    title="Preview"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <BsEye size={20} />
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        <a
+    <Box id="projects">
+      <Title text="Projects" />
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+          gap: '30px',
+          mb: 6,
+        }}
+      >
+        {projectsData.map((project) => (
+          <ProjectItem project={project} key={project.name} />
+        ))}
+      </Box>
+
+      <Box textAlign="center" mb={6}>
+        <Button
+          component={Link}
           href="https://github.com/AbdAlRahmanAtef?tab=repositories"
-          className="all"
           target="_blank"
-          rel="noreferrer"
+          startIcon={<AiFillGithub />}
+          sx={{
+            background: 'linear-gradient(62deg, #5656e1, #92c5ef)',
+            color: '#fff',
+            px: '20px',
+            py: '10px',
+            fontSize: '20px',
+            fontWeight: 400,
+            borderRadius: '26px',
+            transition: '.3s',
+            '&:hover': {
+              transform: 'scale(1.06)',
+            },
+          }}
         >
           See More
-          <BiRightArrowAlt className="icon" />
-        </a>
-      </div>
-    </div>
+        </Button>
+      </Box>
+    </Box>
   );
 };
 
