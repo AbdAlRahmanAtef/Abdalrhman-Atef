@@ -17,6 +17,7 @@ import { AiFillGithub } from 'react-icons/ai';
 const ProjectItem = ({ project }) => {
   const [expanded, setExpanded] = useState(false);
 
+  //#171d2d
   return (
     <Paper
       sx={{
@@ -72,7 +73,7 @@ const ProjectItem = ({ project }) => {
               />
             }
             sx={{
-              background: 'linear-gradient(62deg, #5656e1, #92c5ef)',
+              background: 'linear-gradient(220deg, #0f1624, #202c41)',
               color: '#fff',
               px: '20px',
               py: '10px',
@@ -129,7 +130,7 @@ const ProjectItem = ({ project }) => {
             rel="noreferrer"
             startIcon={<AiFillGithub />}
             sx={{
-              background: 'linear-gradient(62deg, #5656e1, #92c5ef)',
+              background: 'linear-gradient(220deg, #0f1624, #202c41)',
               color: '#fff',
               px: '14px',
               py: '6px',
@@ -151,7 +152,7 @@ const ProjectItem = ({ project }) => {
             rel="noreferrer"
             startIcon={<MdRemoveRedEye />}
             sx={{
-              background: 'linear-gradient(62deg, #5656e1, #92c5ef)',
+              background: 'linear-gradient(220deg, #0f1624, #202c41)',
               color: '#fff',
               px: '14px',
               py: '6px',
