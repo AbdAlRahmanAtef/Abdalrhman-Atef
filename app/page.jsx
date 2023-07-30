@@ -1,4 +1,5 @@
-import { motion, AnimatePresence } from 'framer-motion';
+'use client';
+
 import Navbar from '../components/Navbar';
 import HomePage from '../components/HomePage';
 import About from '../components/About';
@@ -12,7 +13,7 @@ const variants = {
   visible: { opacity: 1 },
 };
 
-export default function Home() {
+const Home = () => {
   return (
     <Container sx={{ overflow: 'hidden' }}>
       <Navbar />
@@ -23,4 +24,6 @@ export default function Home() {
       <Contact />
     </Container>
   );
-}
+};
+
+export default Home;

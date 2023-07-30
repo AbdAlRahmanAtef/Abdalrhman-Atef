@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 import logo from '../assets/logo.png';
@@ -22,6 +24,8 @@ const Navbar = () => {
     let lastScroll = 0;
 
     window.addEventListener('scroll', () => {
+      // setShowMenu(false);
+
       const currentScroll = window.pageYOffset;
       if (currentScroll <= 0) {
         setHidden(false);

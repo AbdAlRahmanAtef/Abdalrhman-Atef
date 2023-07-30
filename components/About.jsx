@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Title from './Title';
 import { Box, Typography } from '@mui/material';

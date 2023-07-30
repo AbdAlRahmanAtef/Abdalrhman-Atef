@@ -9,6 +9,7 @@ import tiktik from '../assets/tiktik.jpg';
 import realator from '../assets/realator.jpg';
 import amazona from '../assets/amazona.png';
 import quran from '../assets/quran.jpg';
+import yallaChat from '../assets/yalla-chat.png';
 import {
   SiNextdotjs,
   SiRedux,
@@ -51,6 +52,32 @@ export const projectsData = [
       },
     ],
   },
+
+  {
+    name: 'Yalla-Chat',
+    code: 'https://github.com/AbdAlRahmanAtef/yalla-chat',
+    live: 'https://yalla-chat.vercel.app/',
+    image: yallaChat,
+    stack: [
+      {
+        tec: 'Next',
+        icon: <SiNextdotjs />,
+      },
+      {
+        tec: 'TypeScript',
+        icon: <SiTypescript />,
+      },
+      {
+        tec: 'Tailwind',
+        icon: <SiTailwindcss />,
+      },
+      {
+        tec: 'MongoDb',
+        icon: <FiDatabase />,
+      },
+    ],
+  },
+
   {
     name: 'TikTik',
     code: 'https://github.com/AbdAlRahmanAtef/tik-tik',
@@ -233,24 +260,24 @@ export const projectsData = [
     ],
   },
 
-  {
-    name: 'Typing Speed Test',
-    code: 'https://github.com/AbdAlRahmanAtef/Typing-Speed-Test-Game',
-    live: 'https://abdalrahmanatef.github.io/Typing-Speed-Test-Game/',
-    image: game,
-    stack: [
-      {
-        tec: 'HTML',
-        icon: <TbBrandHtml5 />,
-      },
-      {
-        tec: 'CSS',
-        icon: <TbBrandCss3 />,
-      },
-      {
-        tec: 'JavaScript',
-        icon: <TbBrandJavascript />,
-      },
-    ],
-  },
+  // {
+  //   name: 'Typing Speed Test',
+  //   code: 'https://github.com/AbdAlRahmanAtef/Typing-Speed-Test-Game',
+  //   live: 'https://abdalrahmanatef.github.io/Typing-Speed-Test-Game/',
+  //   image: game,
+  //   stack: [
+  //     {
+  //       tec: 'HTML',
+  //       icon: <TbBrandHtml5 />,
+  //     },
+  //     {
+  //       tec: 'CSS',
+  //       icon: <TbBrandCss3 />,
+  //     },
+  //     {
+  //       tec: 'JavaScript',
+  //       icon: <TbBrandJavascript />,
+  //     },
+  //   ],
+  // },
 ];

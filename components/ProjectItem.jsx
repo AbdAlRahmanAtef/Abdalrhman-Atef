@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Box,
   Button,
@@ -11,7 +13,6 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import { ImStackoverflow } from 'react-icons/im';
 import { MdKeyboardArrowDown, MdRemoveRedEye } from 'react-icons/md';
-import { motion } from 'framer-motion';
 import { AiFillGithub } from 'react-icons/ai';
 
 const ProjectItem = ({ project }) => {
@@ -27,7 +28,15 @@ const ProjectItem = ({ project }) => {
         color: '#737b85',
       }}
     >
-      <Image className="image" src={project.image} alt={project.name} />
+      <Image
+        className="image"
+        src={project.image}
+        alt={project.name}
+        style={{
+          maxWidth: '100%',
+          height: 'auto',
+        }}
+      />
       <Box sx={{ padding: '16px' }}>
         {' '}
         <Box sx={{ display: 'flex', justifyContent: 'center', mb: '40px' }}>

@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { projectsData } from '../utils/constants';
 import { Box, Button, Link } from '@mui/material';

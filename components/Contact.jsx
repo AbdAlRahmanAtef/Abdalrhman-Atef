@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { BsGithub, BsTelephoneFill } from 'react-icons/bs';
