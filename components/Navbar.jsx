@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-scroll';
 import logo from '../assets/logo.png';
 import Image from 'next/image';
@@ -12,21 +12,14 @@ import { HiMail } from 'react-icons/hi';
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [hidden, setHidden] = useState(false);
-  const handleMenuClass = () => {
-    if (showMenu) {
-      return 'links go-down';
-    } else {
-      return 'links';
-    }
-  };
+
+  const navRef = useRef();
 
   useEffect(() => {
-    setShowMenu(false);
-
     let lastScroll = 0;
 
     window.addEventListener('scroll', () => {
-      // setShowMenu(false);
+      setShowMenu(false);
 
       const currentScroll = window.pageYOffset;
       if (currentScroll <= 0) {
@@ -49,7 +42,21 @@ const Navbar = () => {
     };
   }, []);
 
-  // setShowMenu(false);
+  useEffect(() => {
+    const handler = (e) => {
+      console.log(e.target);
+      if (navRef && showMenu && !navRef.current.contains(e.target)) {
+        setShowMenu(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handler);
+
+    return () => {
+      document.removeEventListener('mousedown', handler);
+    };
+  }, [showMenu]);
+
   return (
     <Paper
       sx={{
@@ -176,17 +183,20 @@ const Navbar = () => {
               </Link>
             </Typography>
           </Box>
-          <Box
-            sx={{ display: { md: 'none' } }}
-            className={`burger-icon  ${showMenu && 'close'}`}
-            onClick={() => setShowMenu((prev) => !prev)}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
+
+          <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+            <div
+              className={`burger-icon  ${showMenu && 'close'}`}
+              onClick={() => setShowMenu((prev) => !prev)}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </Box>
         </Box>
       </Container>
+
       <Paper
         sx={{
           position: 'fixed',
@@ -205,91 +215,93 @@ const Navbar = () => {
         }}
       >
         {' '}
-        <Typography className="nav-item" textAlign="start">
-          <Link
-            activeClass="active"
-            to="home"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={50}
-          >
-            Home
-          </Link>
-        </Typography>
-        <Typography className="nav-item" textAlign="start">
-          <Link
-            activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={50}
-          >
-            About
-          </Link>
-        </Typography>
-        <Typography className="nav-item" textAlign="start">
-          <Link
-            activeClass="active"
-            to="skills"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={50}
-          >
-            Skills
-          </Link>{' '}
-        </Typography>
-        <Typography className="nav-item" textAlign="start">
-          <Link
-            activeClass="active"
-            to="proj"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={50}
-          >
-            Projects
-          </Link>
-        </Typography>
-        <Typography mb={4} className="nav-item" textAlign="start">
-          <Link
-            activeClass="active"
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-300}
-            duration={50}
-          >
-            Contact
-          </Link>
-        </Typography>
-        <div className="icons">
-          <a
-            href="https://www.linkedin.com/in/abdalrhman-atef-12b73022b/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <FaLinkedinIn />
-          </a>
-          <a
-            href="https://github.com/AbdAlRahmanAtef"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <BsGithub />
-          </a>
-          <a
-            href="mailto:abdalrhman.atef.ramadan@gmail.com"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <HiMail />
-          </a>
-          <a href="tel:01019694471" rel="noreferrer">
-            <BsTelephoneFill />
-          </a>
+        <div ref={navRef}>
+          <Typography className="nav-item">
+            <Link
+              activeClass="active"
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={50}
+            >
+              Home
+            </Link>
+          </Typography>
+          <Typography className="nav-item">
+            <Link
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={50}
+            >
+              About
+            </Link>
+          </Typography>
+          <Typography className="nav-item">
+            <Link
+              activeClass="active"
+              to="skills"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={50}
+            >
+              Skills
+            </Link>{' '}
+          </Typography>
+          <Typography className="nav-item">
+            <Link
+              activeClass="active"
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={50}
+            >
+              Projects
+            </Link>
+          </Typography>
+          <Typography mb={4} className="nav-item">
+            <Link
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-300}
+              duration={50}
+            >
+              Contact
+            </Link>
+          </Typography>
+          <div className="icons">
+            <a
+              href="https://www.linkedin.com/in/abdalrhman-atef-12b73022b/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <FaLinkedinIn />
+            </a>
+            <a
+              href="https://github.com/AbdAlRahmanAtef"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <BsGithub />
+            </a>
+            <a
+              href="mailto:abdalrhman.atef.ramadan@gmail.com"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <HiMail />
+            </a>
+            <a href="tel:01019694471" rel="noreferrer">
+              <BsTelephoneFill />
+            </a>
+          </div>
         </div>
       </Paper>
     </Paper>

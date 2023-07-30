@@ -5,7 +5,7 @@ import AnimatedBg from './AnimatedBg';
 import { Box, Typography } from '@mui/material';
 const HomePage = () => {
   return (
-    <Box sx={{ position: 'relative', maxHeight: '500px' }}>
+    <Box sx={{ position: 'relative', maxHeight: '500px' }} id="home">
       {' '}
       <AnimatedBg />
       <Box sx={{ position: 'absolute', top: '30%', color: '#b5c0c0' }}>
