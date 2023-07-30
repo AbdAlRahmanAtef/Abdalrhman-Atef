@@ -21,6 +21,8 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    setShowMenu(false);
+
     let lastScroll = 0;
 
     window.addEventListener('scroll', () => {
