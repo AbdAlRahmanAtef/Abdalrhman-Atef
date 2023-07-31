@@ -14,6 +14,7 @@ const Navbar = () => {
   const [hidden, setHidden] = useState(false);
 
   const navRef = useRef();
+  const iconRef = useRef();
 
   useEffect(() => {
     let lastScroll = 0;
@@ -45,7 +46,13 @@ const Navbar = () => {
   useEffect(() => {
     const handler = (e) => {
       console.log(e.target);
-      if (navRef && showMenu && !navRef.current.contains(e.target)) {
+      if (
+        navRef &&
+        iconRef &&
+        showMenu &&
+        !navRef.current.contains(e.target) &&
+        !iconRef.current.contains(e.target)
+      ) {
         setShowMenu(false);
       }
     };
@@ -188,6 +195,7 @@ const Navbar = () => {
             <div
               className={`burger-icon  ${showMenu && 'close'}`}
               onClick={() => setShowMenu((prev) => !prev)}
+              ref={iconRef}
             >
               <span></span>
               <span></span>
