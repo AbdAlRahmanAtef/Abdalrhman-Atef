@@ -31,7 +31,7 @@ export const projectsData = [
   {
     name: 'Amazona',
     code: 'https://github.com/AbdAlRahmanAtef/amazona',
-    live: 'https://amazona-cw4ohjld1-abdalrahmanatef.vercel.app/',
+    live: 'https://amazona-henna.vercel.app/',
     image: amazona,
     stack: [
       {
